@@ -5,9 +5,9 @@
             <solid android:color="@android:color/darker_gray" />
         </shape>
     </item>
-    <item android:color="@color/teal_700">
+    <item android:color="@color/cyan">
         <shape android:shape="rectangle">
-            <solid android:color="@color/teal_700" />
+            <solid android:color="@color/cyan" />
         </shape>
     </item>
 </selector>

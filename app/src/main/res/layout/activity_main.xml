@@ -41,11 +41,11 @@
             android:layout_width="48dp"
             android:layout_height="144dp"
             app:inputEnabled="false"
-            app:selectionDivider="@drawable/selector_teal_gray"
+            app:selectionDivider="@drawable/selector_cyan_gray"
             app:selectionDividerHeight="1px"
             app:selectionDividersDistance="28dp"
             app:selectorWheelItemCount="5"
-            app:textColor="@color/teal_gray"
+            app:textColor="@color/cyan_gray"
             app:textSize="18sp"
             app:wrapSelectorWheel="false" />
 
@@ -60,7 +60,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=","
-            android:textColor="@color/teal_700"
+            android:textColor="@color/cyan"
             android:textSize="18sp" />
 
         <tt.widget.NumberPicker
@@ -69,9 +69,9 @@
             android:layout_height="144dp"
             android:enabled="false"
             app:inputEnabled="false"
-            app:selectionDivider="@drawable/selector_teal_gray"
+            app:selectionDivider="@drawable/selector_cyan_gray"
             app:selectionDividersDistance="48dp"
-            app:textColor="@color/teal_gray"
+            app:textColor="@color/cyan_gray"
             app:textSize="18sp" />
 
         <tt.widget.NumberPicker

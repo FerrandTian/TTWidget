@@ -24,7 +24,7 @@ Then you can add the dependency to your **app** build.gradle file:
 ```
 dependencies {
     ...
-    implementation 'com.github.FerrandTian:TTWidget:1.0.0'
+    implementation 'com.github.FerrandTian:TTWidget:1.0.1'
 }
 ```
 
