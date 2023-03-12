@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="May 20, 1988 08:08"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large" />
+
+    <LinearLayout
+        android:id="@+id/ll_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <tt.widget.NumberPicker
+            android:id="@+id/np_month"
+            android:layout_width="48dp"
+            android:layout_height="144dp"
+            app:inputEnabled="false"
+            app:selectionDivider="@drawable/selector_teal_gray"
+            app:selectionDividerHeight="1px"
+            app:selectionDividersDistance="28dp"
+            app:selectorWheelItemCount="5"
+            app:textColor="@color/teal_gray"
+            app:textSize="18sp"
+            app:wrapSelectorWheel="false" />
+
+        <tt.widget.NumberPicker
+            android:id="@+id/np_date"
+            android:layout_width="48dp"
+            android:layout_height="144dp"
+            android:layout_marginStart="4dp"
+            app:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=","
+            android:textColor="@color/teal_700"
+            android:textSize="18sp" />
+
+        <tt.widget.NumberPicker
+            android:id="@+id/np_year"
+            android:layout_width="48dp"
+            android:layout_height="144dp"
+            android:enabled="false"
+            app:inputEnabled="false"
+            app:selectionDivider="@drawable/selector_teal_gray"
+            app:selectionDividersDistance="48dp"
+            app:textColor="@color/teal_gray"
+            app:textSize="18sp" />
+
+        <tt.widget.NumberPicker
+            android:id="@+id/np_hour"
+            android:layout_width="48dp"
+            android:layout_height="144dp"
+            android:layout_marginStart="8dp"
+            app:inputEnabled="false"
+            app:selectionDivider="@drawable/selector_purple_gray"
+            app:selectionDividerHeight="1px"
+            app:selectionDividersDistance="28dp"
+            app:selectorWheelItemCount="5"
+            app:textColor="@color/purple_gray"
+            app:textSize="18sp"
+            app:wrapSelectorWheel="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:textColor="@color/purple_500"
+            android:textSize="18sp" />
+
+        <tt.widget.NumberPicker
+            android:id="@+id/np_minute"
+            android:layout_width="48dp"
+            android:layout_height="144dp"
+            android:enabled="false"
+            app:selectionDivider="@drawable/selector_purple_gray"
+            app:selectionDividersDistance="48dp"
+            app:textColor="@color/purple_gray"
+            app:textSize="18sp" />
+    </LinearLayout>
+</LinearLayout>

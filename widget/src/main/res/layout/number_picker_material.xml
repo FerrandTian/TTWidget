@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/numberpicker_input"
+    class="tt.widget.NumberPicker$CustomEditText"
+    android:layout_width="48dp"
+    android:layout_height="144dp"
+    android:background="@null"
+    android:gravity="center"
+    android:singleLine="true"
+    android:visibility="invisible" />
