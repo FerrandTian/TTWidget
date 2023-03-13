@@ -51,15 +51,6 @@ import android.widget.Scroller;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
-import androidx.annotation.CallSuper;
-import androidx.annotation.ColorInt;
-import androidx.annotation.FloatRange;
-import androidx.annotation.IntDef;
-import androidx.annotation.IntRange;
-import androidx.annotation.Px;
-
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
 import java.util.Locale;
 
 /**
@@ -480,14 +471,6 @@ public class NumberPicker extends LinearLayout {
      * Interface to listen for the picker scroll state.
      */
     public interface OnScrollListener {
-        @IntDef({
-                SCROLL_STATE_IDLE,
-                SCROLL_STATE_TOUCH_SCROLL,
-                SCROLL_STATE_FLING
-        })
-        @Retention(RetentionPolicy.SOURCE)
-        public @interface ScrollState {
-        }
 
         /**
          * The view is not scrolling.
@@ -513,7 +496,7 @@ public class NumberPicker extends LinearLayout {
          *                    {@link #SCROLL_STATE_TOUCH_SCROLL} or
          *                    {@link #SCROLL_STATE_IDLE}.
          */
-        public void onScrollStateChange(NumberPicker view, @ScrollState int scrollState);
+        public void onScrollStateChange(NumberPicker view, int scrollState);
     }
 
     /**
@@ -1434,7 +1417,7 @@ public class NumberPicker extends LinearLayout {
      *
      * @param height The height to be set
      */
-    public void setSelectionDividerHeight(@IntRange(from = 0) @Px int height) {
+    public void setSelectionDividerHeight(int height) {
         mSelectionDividerHeight = height;
         invalidate();
     }
@@ -1445,7 +1428,6 @@ public class NumberPicker extends LinearLayout {
      *
      * @return The height of the divider
      */
-    @Px
     public int getSelectionDividerHeight() {
         return mSelectionDividerHeight;
     }
@@ -1466,7 +1448,6 @@ public class NumberPicker extends LinearLayout {
         removeAllCallbacks();
     }
 
-    @CallSuper
     @Override
     protected void drawableStateChanged() {
         super.drawableStateChanged();
@@ -1478,7 +1459,6 @@ public class NumberPicker extends LinearLayout {
         }
     }
 
-    @CallSuper
     @Override
     public void jumpDrawablesToCurrentState() {
         super.jumpDrawablesToCurrentState();
@@ -1551,7 +1531,7 @@ public class NumberPicker extends LinearLayout {
      *
      * @param color A color value in the form 0xAARRGGBB.
      */
-    public void setTextColor(@ColorInt int color) {
+    public void setTextColor(int color) {
         mSelectorWheelPaint.setColor(color);
         mInputText.setTextColor(color);
         invalidate();
@@ -1560,7 +1540,6 @@ public class NumberPicker extends LinearLayout {
     /**
      * @return the text color.
      */
-    @ColorInt
     public int getTextColor() {
         return mSelectorWheelPaint.getColor();
     }
@@ -1570,7 +1549,7 @@ public class NumberPicker extends LinearLayout {
      *
      * @param size The size in pixel units.
      */
-    public void setTextSize(@FloatRange(from = 0.0, fromInclusive = false) float size) {
+    public void setTextSize(float size) {
         mTextSize = size;
         mSelectorWheelPaint.setTextSize(size);
         mInputText.setTextSize(TypedValue.COMPLEX_UNIT_PX, size);
@@ -1580,7 +1559,6 @@ public class NumberPicker extends LinearLayout {
     /**
      * @return the size (in pixels) of the text size in this NumberPicker.
      */
-    @FloatRange(from = 0.0, fromInclusive = false)
     public float getTextSize() {
         return mSelectorWheelPaint.getTextSize();
     }
